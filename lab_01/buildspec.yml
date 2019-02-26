@@ -14,5 +14,5 @@ phases:
       - go build ./lab_01/hello.go
 artifacts:
   files:
-    - 'lab01_01/out/$GOOS/hello'
+    - 'lab_01/**/*'
   
