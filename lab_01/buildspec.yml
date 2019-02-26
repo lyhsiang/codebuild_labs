@@ -13,6 +13,7 @@ phases:
       - echo Compiling the Go code...
       - go build ./lab_01/hello.go
 artifacts:
-  files:
-    - 'lab_01/**/*'
+  files: 
+    - '*/hello'
+  base-directory: lab_01
   
