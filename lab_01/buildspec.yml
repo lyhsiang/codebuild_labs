@@ -15,5 +15,5 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: out
+  base-directory: lab01/out/
     
