@@ -1,19 +1,8 @@
 version: 0.2
-
-env:
-  variables :
-    GOOS: "darwin"
-    GOOS: "linux"
-    GOOS: "windows"
- 
 phases:
   build:
     commands:
-      - echo Build started on `date`
-      - echo Compiling the Go code...
-      - go build ./lab_01/hello.go
+      - for GOOS in linux darwin windows; do go build -v ./lab_01/hello.go; mkdir -p lab_01/out/$GOOS; mv hello* lab_01/out/$GOOS/; done
 artifacts:
-  files: 
-    - 'lab_01/**/*'
-
-  
+  files:
+    - lab_01/**/*
