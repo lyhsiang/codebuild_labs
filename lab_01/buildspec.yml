@@ -3,6 +3,8 @@ version: 0.2
 env:
   variables:
     GOOS: "darwin"
+  parameter-store:
+    GOOS: "/codeebuild-nht/goos"
  
 phases:
   build:
