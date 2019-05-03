@@ -6,6 +6,7 @@ phases:
       - echo $CODEBUILD_BUILD_ARN | cut -d ':' -f5
       - cat $CODEBUILD_BUILD_ARN | cut -d ':' -f5
       - echo $CODEBUILD_BUILD_ID
+      - printenv
 artifacts:
   files:
     - lab_01/**/*
