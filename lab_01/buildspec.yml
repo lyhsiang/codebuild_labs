@@ -7,7 +7,7 @@ phases:
       - cat $CODEBUILD_BUILD_ARN | cut -d ':' -f5
       - echo $CODEBUILD_BUILD_ID
       - printenv
-      -  info
+      - docker info
 artifacts:
   files:
     - lab_01/**/*
