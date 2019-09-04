@@ -1,7 +1,7 @@
 version: 0.2
   install:
     runtime-versions:
-      golang: 1.12
+      java: openjdk8
   build:
     commands:
       #- for GOOS in linux darwin windows; do go build -v ./lab_01/hello.go; mkdir -p lab_01/out/$GOOS; mv hello* lab_01/out/$GOOS/; done
