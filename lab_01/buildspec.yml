@@ -3,6 +3,7 @@ version: 0.2
 env:
   parameter-store:
     build_ssh_key: /aws/reference/secretsmanger/test
+ 
 phases:
   install:
     runtime-versions:
@@ -14,7 +15,6 @@ phases:
       - cat $CODEBUILD_BUILD_ARN | cut -d ':' -f5
       - echo $CODEBUILD_BUILD_ID
       - echo $build_ssh_key
-
 artifacts:
   files:
     - lab_01/**/*
