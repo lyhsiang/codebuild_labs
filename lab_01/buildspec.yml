@@ -2,6 +2,7 @@ version: 0.2
 env:
   parameter-store:
     build_ssh_key: /aws/reference/secretsmanger/tutorials/MyFirstTutorialSecret
+phase:
   install:
     runtime-versions:
       java: openjdk8
