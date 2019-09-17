@@ -1,4 +1,7 @@
 version: 0.2
+env:
+  parameter-store:
+    build_ssh_key: "/aws/reference/secretsmanger/testsecret"
   install:
     runtime-versions:
       java: openjdk8
@@ -8,8 +11,8 @@ version: 0.2
       - echo $CODEBUILD_BUILD_ARN | cut -d ':' -f5
       - cat $CODEBUILD_BUILD_ARN | cut -d ':' -f5
       - echo $CODEBUILD_BUILD_ID
-      - printenv
-      - yum info
+      - echo $build_ssh_key
+
 artifacts:
   files:
     - lab_01/**/*
