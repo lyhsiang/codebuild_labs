@@ -1,8 +1,8 @@
 version: 0.2
 
-env:
-  parameter-store:
-    build_ssh_key: /aws/reference/secretsmanger/test
+#env:
+#  parameter-store:
+#    build_ssh_key: /aws/reference/secretsmanger/test
  
 phases:
   install:
