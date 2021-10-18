@@ -14,6 +14,7 @@ phases:
       - sh test.sh
       - echo $CODEBUILD_BUILD_ARN | cut -d ':' -f5
       - cat $CODEBUILD_BUILD_ARN | cut -d ':' -f5
+      - echo "Git Start"
       - git ls-remote -h -t https://github.com/lyhsiang/codebuild_labs.git
       #- echo $CODEBUILD_BUILD_ID
       #- echo $build_ssh_key
