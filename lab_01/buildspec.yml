@@ -12,12 +12,13 @@ phases:
     commands:
       #- for GOOS in linux darwin windows; do go build -v ./lab_01/hello.go; mkdir -p lab_01/out/$GOOS; mv hello* lab_01/out/$GOOS/; done
       # - sh test.sh
+      - java --version
       - echo $CODEBUILD_BUILD_ARN | cut -d ':' -f5
       - cat $CODEBUILD_BUILD_ARN | cut -d ':' -f5
       - echo "Git Start"
-      - git ls-remote -h -t https://github.com/lyhsiang/codebuild_labs.git
-      - git log | head -100
-      - git status
+      #- git ls-remote -h -t https://github.com/lyhsiang/codebuild_labs.git
+      #- git log | head -100
+      #- git status
       #- echo $CODEBUILD_BUILD_ID
       #- echo $build_ssh_key
 #artifacts:
