@@ -1,8 +1,8 @@
 version: 0.2
 
-env:
-  parameter-store:
-    build_ssh_key: /aws/reference/secretsmanger/test
+#env:
+#  parameter-store:
+#    build_ssh_key: /aws/reference/secretsmanger/test
  
 phases:
   install:
@@ -12,7 +12,7 @@ phases:
     commands:
       #- for GOOS in linux darwin windows; do go build -v ./lab_01/hello.go; mkdir -p lab_01/out/$GOOS; mv hello* lab_01/out/$GOOS/; done
       - sh test.sh
-      - echo $CODEBUILD_BUILD_ARN | cut -d ':' -f5
+       echo $CODEBUILD_BUILD_ARN | cut -d ':' -f5
       - cat $CODEBUILD_BUILD_ARN | cut -d ':' -f5
       #- echo $CODEBUILD_BUILD_ID
       #- echo $build_ssh_key
